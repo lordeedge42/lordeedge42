@@ -3,27 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Minimalist Hello World</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        h1 {
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .text {
+            font-size: 3rem;
+            letter-spacing: 0.3rem;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            background: linear-gradient(
+                to right,
+                #2ecc71,
+                #3498db,
+                #e74c3c,
+                #f1c40f,
+                #9b59b6
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: #2c3e50;
+            background-size: 500% auto;
+        }
+
+        .text:hover {
+            color: transparent;
+            animation: gradient 3s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="text">hello world</div>
 </body>
 </html>
